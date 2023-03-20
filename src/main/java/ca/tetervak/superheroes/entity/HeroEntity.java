@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotNull;
 
 
 @Entity
-@Table
+@Table(name="heroes")
 public class HeroEntity {
 
     @Id
