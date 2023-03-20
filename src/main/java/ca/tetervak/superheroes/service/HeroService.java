@@ -34,15 +34,15 @@ public class HeroService {
     }
 
     public void removeHeroById(UUID id) {
-        repo.deleteById(id);
+        repo.delete(findOrThrow(id));
     }
 
     public HeroDto addHero(HeroDto heroDto) {
         return convertToDto(repo.save(convertToEntity(heroDto)));
     }
 
-    public void updateHero(UUID id, HeroDto heroDto) {
-        findOrThrow(id);
+    public void updateHero(HeroDto heroDto) {
+        findOrThrow(heroDto.getId());
         repo.save(convertToEntity(heroDto));
     }
 

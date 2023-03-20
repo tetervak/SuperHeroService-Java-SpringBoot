@@ -51,7 +51,7 @@ public class HeroController {
                 "id does not match"
         );
 
-        heroService.updateHero(id, heroDto);
+        heroService.updateHero(heroDto);
     }
 
 }
