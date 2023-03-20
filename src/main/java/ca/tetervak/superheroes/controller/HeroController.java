@@ -1,6 +1,7 @@
 package ca.tetervak.superheroes.controller;
 
 import ca.tetervak.superheroes.dto.HeroDto;
+import ca.tetervak.superheroes.exception.NotFoundException;
 import ca.tetervak.superheroes.service.HeroService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -52,4 +53,5 @@ public class HeroController {
 
         heroService.updateHero(id, heroDto);
     }
+
 }

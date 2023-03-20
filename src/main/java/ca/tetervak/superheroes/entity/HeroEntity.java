@@ -26,17 +26,6 @@ public class HeroEntity {
     private String createdAt = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss z")
             .format(new Date());
 
-    public HeroEntity() {
-    }
-
-    public HeroEntity(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public HeroEntity(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
     public UUID getId() {
         return id;
