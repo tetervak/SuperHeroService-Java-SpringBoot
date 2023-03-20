@@ -1,17 +1,22 @@
 package ca.tetervak.superheroes.init;
 
 import ca.tetervak.superheroes.service.HeroService;
-import lombok.AllArgsConstructor;
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
 @Component
-@AllArgsConstructor
 public class DataInitializer {
 
 
-    private HeroService heroService;
+    private final HeroService heroService;
 
+    public DataInitializer(HeroService heroService) {
+        this.heroService = heroService;
+    }
+
+    @PostConstruct
     void loadInitData(){
+
 
 
 

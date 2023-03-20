@@ -6,18 +6,10 @@ import java.util.Date;
 import java.util.UUID;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 
 @Entity
 @Table
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
 public class HeroEntity {
 
     @Id
@@ -33,4 +25,64 @@ public class HeroEntity {
     private String knownAs;
     private String createdAt = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss z")
             .format(new Date());
+
+    public HeroEntity() {
+    }
+
+    public HeroEntity(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public HeroEntity(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getHouse() {
+        return house;
+    }
+
+    public void setHouse(String house) {
+        this.house = house;
+    }
+
+    public String getKnownAs() {
+        return knownAs;
+    }
+
+    public void setKnownAs(String knownAs) {
+        this.knownAs = knownAs;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
 }

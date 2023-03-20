@@ -3,7 +3,6 @@ package ca.tetervak.superheroes.controller;
 import ca.tetervak.superheroes.dto.HeroDto;
 import ca.tetervak.superheroes.service.HeroService;
 import jakarta.validation.Valid;
-import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -11,30 +10,34 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 import java.util.UUID;
 
-@AllArgsConstructor
 @RestController
 @RequestMapping("api/v1/heroes")
 public class HeroController {
-    private final HeroService service;
+
+    private final HeroService heroService;
+
+    public HeroController(HeroService heroService) {
+        this.heroService = heroService;
+    }
 
     @GetMapping
     public List<HeroDto> getHeroes() {
-        return service.findAllHeroes();
+        return heroService.findAllHeroes();
     }
 
     @GetMapping("/{id}")
     public HeroDto getHeroById(@PathVariable("id") UUID id) {
-        return service.findHeroById(id);
+        return heroService.findHeroById(id);
     }
 
     @DeleteMapping("/{id}")
     public void deleteHeroById(@PathVariable("id") UUID id) {
-        service.removeHeroById(id);
+        heroService.removeHeroById(id);
     }
 
     @PostMapping
     public HeroDto postHero(@Valid @RequestBody HeroDto heroDto) {
-        return service.addHero(heroDto);
+        return heroService.addHero(heroDto);
     }
 
     @PutMapping("/{id}")
@@ -47,6 +50,6 @@ public class HeroController {
                 "id does not match"
         );
 
-        service.updateHero(id, heroDto);
+        heroService.updateHero(id, heroDto);
     }
 }

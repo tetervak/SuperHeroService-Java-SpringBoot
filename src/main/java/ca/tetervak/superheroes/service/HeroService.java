@@ -8,17 +8,20 @@ import ca.tetervak.superheroes.dto.HeroDto;
 import ca.tetervak.superheroes.entity.HeroEntity;
 import ca.tetervak.superheroes.exception.NotFoundException;
 import ca.tetervak.superheroes.repository.HeroRepository;
-import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-@AllArgsConstructor
 @Service
 public class HeroService {
 
     private final HeroRepository repo;
 
     private final ModelMapper mapper;
+
+    public HeroService(HeroRepository repo, ModelMapper mapper) {
+        this.repo = repo;
+        this.mapper = mapper;
+    }
 
     public List<HeroDto> findAllHeroes() {
         return repo.findAll().stream()
