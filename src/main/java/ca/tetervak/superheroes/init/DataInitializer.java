@@ -30,9 +30,4 @@ public class DataInitializer {
         heroService.addHero(spiderMan);
     }
 
-    @PreDestroy
-    public void clearData() {
-        heroService.deleteAllHeroes();
-    }
-
 }
