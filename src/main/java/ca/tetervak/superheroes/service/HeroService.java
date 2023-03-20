@@ -46,6 +46,10 @@ public class HeroService {
         repo.save(convertToEntity(heroDto));
     }
 
+    public void deleteAllHeroes(){
+        repo.deleteAll();
+    }
+
     private HeroEntity findOrThrow(final UUID id) {
         return repo
                 .findById(id)
