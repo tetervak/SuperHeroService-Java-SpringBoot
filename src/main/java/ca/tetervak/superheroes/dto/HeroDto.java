@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class AntiHeroDto {
+public class HeroDto {
 
     private UUID id;
 

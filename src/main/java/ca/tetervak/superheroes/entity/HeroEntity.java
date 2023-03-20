@@ -18,7 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class AntiHeroEntity {
+public class HeroEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "UUID")
