@@ -41,9 +41,9 @@ public class HeroService {
         return convertToDto(repo.save(convertToEntity(heroDto)));
     }
 
-    public void updateHero(HeroDto heroDto) {
+    public HeroDto updateHero(HeroDto heroDto) {
         findOrThrow(heroDto.getId());
-        repo.save(convertToEntity(heroDto));
+        return convertToDto(repo.save(convertToEntity(heroDto)));
     }
 
     public void deleteAllHeroes(){

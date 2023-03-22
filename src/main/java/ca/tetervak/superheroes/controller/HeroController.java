@@ -42,7 +42,7 @@ public class HeroController {
     }
 
     @PutMapping("/{id}")
-    public void putHero(
+    public HeroDto putHero(
             @PathVariable("id") UUID id,
             @Valid @RequestBody HeroDto heroDto
     ) {
@@ -51,7 +51,7 @@ public class HeroController {
                 "id does not match"
         );
 
-        heroService.updateHero(heroDto);
+        return heroService.updateHero(heroDto);
     }
 
 }
