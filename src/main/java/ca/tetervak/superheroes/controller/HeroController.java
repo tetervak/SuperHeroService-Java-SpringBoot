@@ -32,11 +32,13 @@ public class HeroController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteHeroById(@PathVariable("id") UUID id) {
         heroService.removeHeroById(id);
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public HeroDto postHero(@Valid @RequestBody HeroDto heroDto) {
         return heroService.addHero(heroDto);
     }
