@@ -1,8 +1,7 @@
-package ca.tetervak.superheroes.controller;
+package ca.tetervak.superhero.controller;
 
-import ca.tetervak.superheroes.dto.HeroDto;
-import ca.tetervak.superheroes.exception.NotFoundException;
-import ca.tetervak.superheroes.service.HeroService;
+import ca.tetervak.superhero.dto.HeroDto;
+import ca.tetervak.superhero.service.HeroService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

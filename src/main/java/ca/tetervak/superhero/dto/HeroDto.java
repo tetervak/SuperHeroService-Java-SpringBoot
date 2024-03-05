@@ -1,4 +1,4 @@
-package ca.tetervak.superheroes.dto;
+package ca.tetervak.superhero.dto;
 import java.util.UUID;
 import jakarta.validation.constraints.NotNull;
 

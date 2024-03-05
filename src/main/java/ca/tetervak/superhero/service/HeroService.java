@@ -1,13 +1,13 @@
-package ca.tetervak.superheroes.service;
+package ca.tetervak.superhero.service;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-import ca.tetervak.superheroes.dto.HeroDto;
-import ca.tetervak.superheroes.entity.HeroEntity;
-import ca.tetervak.superheroes.exception.NotFoundException;
-import ca.tetervak.superheroes.repository.HeroRepository;
+import ca.tetervak.superhero.dto.HeroDto;
+import ca.tetervak.superhero.entity.HeroEntity;
+import ca.tetervak.superhero.exception.NotFoundException;
+import ca.tetervak.superhero.repository.HeroRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

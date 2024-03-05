@@ -1,9 +1,8 @@
-package ca.tetervak.superheroes.init;
+package ca.tetervak.superhero.init;
 
-import ca.tetervak.superheroes.dto.HeroDto;
-import ca.tetervak.superheroes.service.HeroService;
+import ca.tetervak.superhero.dto.HeroDto;
+import ca.tetervak.superhero.service.HeroService;
 import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Component;
 
 @Component

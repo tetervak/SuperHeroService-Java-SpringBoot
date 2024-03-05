@@ -1,4 +1,4 @@
-package ca.tetervak.superheroes.entity;
+package ca.tetervak.superhero.entity;
 
 
 import java.text.SimpleDateFormat;

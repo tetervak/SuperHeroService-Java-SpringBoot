@@ -1,4 +1,4 @@
-package ca.tetervak.superheroes.config;
+package ca.tetervak.superhero.config;
 
 
 import org.modelmapper.ModelMapper;

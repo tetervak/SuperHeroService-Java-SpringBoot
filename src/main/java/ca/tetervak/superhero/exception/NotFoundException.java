@@ -1,4 +1,4 @@
-package ca.tetervak.superheroes.exception;
+package ca.tetervak.superhero.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

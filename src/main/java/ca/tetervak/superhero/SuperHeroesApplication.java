@@ -1,4 +1,4 @@
-package ca.tetervak.superheroes;
+package ca.tetervak.superhero;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

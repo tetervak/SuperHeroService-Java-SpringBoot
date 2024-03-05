@@ -1,6 +1,6 @@
-package ca.tetervak.superheroes.repository;
+package ca.tetervak.superhero.repository;
 
-import ca.tetervak.superheroes.entity.HeroEntity;
+import ca.tetervak.superhero.entity.HeroEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
