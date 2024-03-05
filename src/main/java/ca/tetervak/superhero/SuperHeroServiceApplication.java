@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SuperHeroesApplication {
+public class SuperHeroServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SuperHeroesApplication.class, args);
+        SpringApplication.run(SuperHeroServiceApplication.class, args);
     }
 
 }
